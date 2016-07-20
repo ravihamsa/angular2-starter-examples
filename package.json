@@ -1,0 +1,33 @@
+{
+  "name": "angular2-starter-examples",
+  "version": "1.0.0",
+  "description": "angular2-starter-examples TS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravihamsa/angular2-starter-examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ravihamsa/angular2-starter-examples/issues"
+  },
+  "homepage": "https://github.com/ravihamsa/angular2-starter-examples#readme",
+  "dependencies": {
+    "angular2-template-loader": "^0.4.0",
+    "awesome-typescript-loader": "^2.1.0",
+    "css-loader": "^0.23.1",
+    "express": "^4.14.0",
+    "express-http-proxy": "^0.7.4",
+    "raw-loader": "^0.5.1",
+    "to-string-loader": "^1.1.4"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.10",
+    "webpack": "^1.13.1",
+    "webpack-merge": "^0.14.0"
+  }
+}

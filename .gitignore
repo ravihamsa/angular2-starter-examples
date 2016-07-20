@@ -1,0 +1,9 @@
+/node_modules/
+/mocks/node_modules/
+/mocks/*.html
+#/dist/
+/npm-debug.log
+/typings/globals
+/bower_components/
+/typings/
+.idea/
