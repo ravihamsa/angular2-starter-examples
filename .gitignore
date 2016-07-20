@@ -7,3 +7,5 @@
 /bower_components/
 /typings/
 .idea/
+
+.DS_Store

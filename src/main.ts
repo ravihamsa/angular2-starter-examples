@@ -1,9 +1,7 @@
-/**
- * Created by ravi.hamsa on 7/20/16.
- */
-
-var tmp = function(message:string = 'ravi kumar ha'){
-  document.write(message);
+import { bootstrap } from '@angular/platform-browser-dynamic';
+import { enableProdMode } from '@angular/core';
+import { AppComponent } from './app/app.component';
+if (process.env.ENV === 'production') {
+  enableProdMode();
 }
-
-tmp('message from temp');
+bootstrap(AppComponent, []);
