@@ -1,4 +1,23 @@
 <main>
-  <h1>Hello from Angular 2 App with Webpack</h1>
-  <img src="../../public/images/angular.png">
+  <app-header></app-header>
+
+  <div class="container">
+    <div class="row">
+      <img src="../../public/images/angular.png">
+      <br/>
+      project list
+      <project-list></project-list>
+
+      challenge list
+      <challenge-list></challenge-list>
+
+
+      selected challenge
+      <div *ngIf="selectedChallenge">
+        <challenge-details [selectedChallenge]="selectedChallenge"></challenge-details>
+      </div>
+
+    </div>
+  </div>
+
 </main>

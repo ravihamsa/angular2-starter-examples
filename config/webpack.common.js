@@ -41,12 +41,15 @@ module.exports = {
     ]
   },
 
+
+
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
     }),
 
     new HtmlWebpackPlugin({
+      title:'Angular App',
       template: 'src/index.html'
     })
   ]

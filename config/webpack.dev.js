@@ -17,8 +17,19 @@ module.exports = webpackMerge(commonConfig, {
     new ExtractTextPlugin('[name].css')
   ],
 
+
+
   devServer: {
     historyApiFallback: true,
-    stats: 'minimal'
+    stats: 'minimal',
+    proxy: {
+      '/api/*': {
+        target: 'http://localhost:4000',
+        rewrite: function(req) {
+          req.url = req.url.replace(/^\/api/, '');
+          console.log(req.url)
+        }
+      }
+    }
   }
 });
