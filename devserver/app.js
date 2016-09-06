@@ -18,7 +18,9 @@ app.get('/', function(req, res){
 })
 
 app.get('/projects.json', function(req, res){
-  res.send(JSON.stringify(projects))
+  setTimeout(function(){
+    res.send(JSON.stringify(projects))
+  },5000)
 })
 
 app.get('/challenges.json', function(req, res){

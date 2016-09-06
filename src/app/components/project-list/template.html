@@ -1,7 +1,7 @@
 <div class="container">
-  <ul>
 
-    <li *ngFor="let project of projects | async">
+  <ul  *myLoader="projectList">
+    <li *ngFor="let project of projectList">
       {{project.name}}
     </li>
   </ul>

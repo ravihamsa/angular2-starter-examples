@@ -5,6 +5,8 @@ import {Component} from '@angular/core';
 import {ProjectListService} from "../../stores/project-list";
 import Project from '../../models/project';
 import {Observable} from "rxjs/Rx";
+import {FetchJsonPipe} from '../../pipes/FetchJsonPipe'
+import {LoaderDirective, Loader, TestComponent} from "../../directives/LoaderDirective";
 
 
 @Component({
@@ -12,10 +14,14 @@ import {Observable} from "rxjs/Rx";
   selector: 'project-list',
   templateUrl: 'template.html',
   styleUrls: ['styles.css'],
-  providers: [ProjectListService]
+  providers: [ProjectListService],
+  pipes: [FetchJsonPipe],
+  directives:[LoaderDirective, TestComponent]
 })
 export default class ProjectList {
   projects:Observable<Project[]>
+
+  projectList:Project[];
 
   constructor(private projectService:ProjectListService) {
 
@@ -23,5 +29,6 @@ export default class ProjectList {
 
   ngOnInit() {
     this.projects = this.projectService.getProjects();
+    this.projects.subscribe(list => this.projectList=list)
   }
 }

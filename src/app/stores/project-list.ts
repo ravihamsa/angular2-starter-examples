@@ -17,7 +17,7 @@ export class ProjectListService {
   getProjects():Observable<Project[]> {
     return this.http.get(serviceUrl)
       .map(this.extractData)
-      .catch(this.handleError);
+      .catch(this.handleError).cache(1);
   }
 
   private extractData(res:Response) {
